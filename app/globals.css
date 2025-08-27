@@ -1,26 +1,115 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #363636; /* 전체 배경 */
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 150px;
+}
+
+/* 좌측 로고 */
+.logo-section {
+  display: flex;
+  align-items: center;
+  transform: scale(2);   
+  transform-origin: top middle; 
+}
+
+.logo-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #00ff66;
+  margin-left: 200px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 16px; 
+}
+
+/* 로그인 박스 */
+.login-box {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 340px;
+  width: 340px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  transform: scale(1.5);   
+  transform-origin: top middle; 
+  position: relative;
+  left: -25 0px; /* 40px 왼쪽으로 이동 */
+}
+
+.login-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 3px; /* 좌우 동일하게 더 넓게 */
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #00ff66;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.signup-btn {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #00ff66;
+  color: black;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  opacity: 0.9;
 }
